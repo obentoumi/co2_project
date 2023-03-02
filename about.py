@@ -6,3 +6,9 @@ def about_app():
 
 if __name__ == "__about_app__":
     about_app()
+
+
+
+# pip install pipreqs
+# pipreqs --encoding=utf8
+# pipreqs --encoding=utf8 --force
