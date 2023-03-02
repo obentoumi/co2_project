@@ -118,10 +118,3 @@ def eda_app():
     # fig_subplot.add_trace(fig_violin.data[0], row = 2, col = 2)
 
     # st.plotly_chart(figure_or_data = fig_subplot, use_container_width = True)
-
-
-    
-    
-
-if __name__ == "__eda_app__":
-    eda_app()
