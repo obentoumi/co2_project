@@ -128,7 +128,7 @@ def main():
     elif choice == "Machine Learning Model":
         ml_app()
 
-    else:
+    elif choice == "About":
         about_app()
 
 
