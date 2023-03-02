@@ -9,7 +9,6 @@ PAGE_CONFIG = {"page_title"             : "CO2 Emissions Model - Streamlit",
                 "layout"                : "wide",
                 "initial_sidebar_state" : "expanded"}
 
-@st.cache_data
 def read_data():
 
     lista_df = list()
