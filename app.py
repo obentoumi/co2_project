@@ -122,14 +122,14 @@ def main():
         if st.button(label = "Are you ready?"):
             st.balloons()
 
-    elif choice == "Exploratory Data Analysis":
-        eda_app()
+    # elif choice == "Exploratory Data Analysis":
+    #     eda_app()
 
-    elif choice == "Machine Learning Model":
-        ml_app()
+    # elif choice == "Machine Learning Model":
+    #     ml_app()
 
-    elif choice == "About":
-        about_app()
+    # elif choice == "About":
+    #     about_app()
 
 
 
