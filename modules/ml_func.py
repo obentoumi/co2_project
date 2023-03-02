@@ -67,7 +67,7 @@ def load_model(fuel_type):
     if not os.getcwd().endswith("sources"):
         os.chdir("sources")
 
-    with open(file = f"{fuel_type}_X_scaler.pkl", mode = "rb") as file:
+    with open(file = f"{fuel_type}_x_scaler.pkl", mode = "rb") as file:
         X_scaler = pickle.load(file)
 
     with open(file = f"{fuel_type}_y_scaler.pkl", mode = "rb") as file:
