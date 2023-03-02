@@ -125,11 +125,11 @@ def main():
     elif choice == "Exploratory Data Analysis":
         eda_app()
 
-    # elif choice == "Machine Learning Model":
-    #     ml_app()
+    elif choice == "Machine Learning Model":
+        ml_app()
 
-    # elif choice == "About":
-    #     about_app()
+    elif choice == "About":
+        about_app()
 
 
 
