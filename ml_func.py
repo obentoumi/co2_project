@@ -68,6 +68,7 @@ def read_data():
 
     df = pd.concat(lista_df, ignore_index = True)
     df.drop_duplicates(inplace = True)
+    df.reset_index(inplace = True)
 
     fuel_type_dict = {"X" : "Reg. Gasoline", 
                       "Z" : "Prm. Gasoline",
