@@ -3,7 +3,6 @@ import pandas as pd
 import os
 import pickle
 import base64
-import sklearn
 
 PAGE_CONFIG = {"page_title"             : "CO2 Emissions Model - Streamlit",
                 "page_icon"             : ":robot_face:",
@@ -15,7 +14,12 @@ def read_data():
     lista_df = list()
 
     if not os.getcwd().endswith("sources"):
-        os.chdir("sources")
+        
+        try:
+            os.chdir("sources")
+        except:
+            os.chdir("..")
+        
 
     csv_files = [file for file in os.listdir() if file.endswith(".csv") and file != "metrics.csv"]
     
