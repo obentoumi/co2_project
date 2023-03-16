@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from modules.ml_func import *
+from ml_func import *
 import plotly.express as px
 # pip install statsmodels
 

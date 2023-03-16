@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
 from plotly.subplots import make_subplots
-from modules.ml_func import *    
+from ml_func import *    
 
 
 def eda_app():
