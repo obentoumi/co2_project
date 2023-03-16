@@ -9,19 +9,34 @@ PAGE_CONFIG = {"page_title"             : "CO2 Emissions Model - Streamlit",
                 "layout"                : "wide",
                 "initial_sidebar_state" : "expanded"}
 
+csv_files = ['MY1995-1999 Fuel Consumption Ratings 5-cycle.csv',
+             'MY2000-2004 Fuel Consumption Ratings 5-cycle.csv',
+             'MY2005-2009 Fuel Consumption Ratings 5-cycle.csv',
+             'MY2010-2014 Fuel Consumption Ratings 5-cycle.csv',
+             'MY2015 Fuel Consumption Ratings.csv',
+             'MY2016 Fuel Consumption Ratings.csv',
+             'MY2017 Fuel Consumption Ratings.csv',
+             'MY2018 Fuel Consumption Ratings.csv',
+             'MY2019 Fuel Consumption Ratings.csv',
+             'MY2020 Fuel Consumption Ratings.csv',
+             'MY2021 Fuel Consumption Ratings.csv',
+             'MY2022 Fuel Consumption Ratings.csv',
+             'MY2023 Fuel Consumption Ratings.csv']
+
+
 def read_data():
 
     lista_df = list()
 
-    if not os.getcwd().endswith("sources"):
+    # if not os.getcwd().endswith("sources"):
         
-        os.chdir("sources")
+    #     os.chdir("sources")
 
-        lista_csv = os.listdir()
+    #     lista_csv = os.listdir()
 
-        os.chdir("..")
+    #     os.chdir("..")
         
-    csv_files = [file for file in lista_csv if file.endswith(".csv") and file != "metrics.csv"]
+    # csv_files = [file for file in lista_csv if file.endswith(".csv") and file != "metrics.csv"]
     
     for file in csv_files:
 
@@ -69,19 +84,19 @@ def read_data():
 
 def load_model(fuel_type):
 
-    if not os.getcwd().endswith("sources"):
-        os.chdir("sources")
+    # if not os.getcwd().endswith("sources"):
+    #     os.chdir("sources")
 
-    with open(file = f"{fuel_type}_x_scaler.pkl", mode = "rb") as file:
+    with open(file = f"sources/{fuel_type}_x_scaler.pkl", mode = "rb") as file:
         X_scaler = pickle.load(file)
 
-    with open(file = f"{fuel_type}_y_scaler.pkl", mode = "rb") as file:
+    with open(file = f"sources/{fuel_type}_y_scaler.pkl", mode = "rb") as file:
         y_scaler = pickle.load(file)
 
-    with open(file = f"{fuel_type}_model.pkl", mode = "rb") as file:
+    with open(file = f"sources/{fuel_type}_model.pkl", mode = "rb") as file:
         model = pickle.load(file)
 
-    os.chdir("..")
+    # os.chdir("..")
     
     return X_scaler, y_scaler, model
 
