@@ -16,9 +16,12 @@ def read_data():
     if not os.getcwd().endswith("sources"):
         
         os.chdir("sources")
-        
 
-    csv_files = [file for file in os.listdir() if file.endswith(".csv") and file != "metrics.csv"]
+        lista_csv = os.listdir()
+
+        os.chdir("..")
+        
+    csv_files = [file for file in lista_csv if file.endswith(".csv") and file != "metrics.csv"]
     
     for file in csv_files:
 
@@ -59,7 +62,7 @@ def read_data():
 
     df["Fuel Type"] = df["Fuel Type"].replace(fuel_type_dict)
 
-    os.chdir("..")
+    # os.chdir("..")
 
 
     return df
