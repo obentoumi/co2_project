@@ -77,8 +77,10 @@ def read_data():
 
     df["Fuel Type"] = df["Fuel Type"].replace(fuel_type_dict)
 
-    # os.chdir("..")
+    df["Make"] = df["Make"].apply(lambda x : x.upper())
+    df["Vehicle Class"] = df["Vehicle Class"].apply(lambda x : x.upper())
 
+    # os.chdir("..")
 
     return df
 
