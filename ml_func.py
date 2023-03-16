@@ -25,7 +25,7 @@ def read_data():
     
     for file in csv_files:
 
-        df_ = pd.read_csv(filepath_or_buffer = file, encoding = "latin1", header = 1)
+        df_ = pd.read_csv(filepath_or_buffer = f"sources/{file}", encoding = "latin1", header = 1)
 
         df_ = df_.iloc[:, :13]
 
