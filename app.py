@@ -1,6 +1,7 @@
 import streamlit as st
 import plotly.express as px
 import numpy as np
+import sklearn
 
 from ml_func import *
 from eda import eda_app
