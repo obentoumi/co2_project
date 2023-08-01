@@ -2,7 +2,7 @@ import pandas as pd
 # import os
 import pickle
 import base64
-# import sklearn
+import sklearn
 
 PAGE_CONFIG = {"page_title"             : "CO2 Emissions Model - Streamlit",
                 "page_icon"             : ":robot_face:",
