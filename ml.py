@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from modules.ml_func import *
 import plotly.express as px
+import sklearn
 # pip install statsmodels
 
     

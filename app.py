@@ -6,6 +6,7 @@ from modules.ml_func import *
 from eda import eda_app
 from ml import ml_app
 from about import about_app
+import sklearn
 
 def main():
     st.set_page_config(**PAGE_CONFIG)
