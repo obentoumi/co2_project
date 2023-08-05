@@ -11,8 +11,6 @@ import sklearn
 def main():
     st.set_page_config(**PAGE_CONFIG)
 
-    st.write("hola")
-
     menu = ["Main App", "Exploratory Data Analysis", "Machine Learning Model", "About"]
 
     choice = st.sidebar.selectbox(label = "Menu", options = menu, index = 0)
